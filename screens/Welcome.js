@@ -7,6 +7,7 @@ const Welcome = () => {
     const navigation = useNavigation();
     const onGetStartedPress = () => {
       navigation.navigate('Home');
+    //   navigation.navigate('HomeScreen');
     };
 
   return (

@@ -1,10 +1,12 @@
 import { StyleSheet, Text, View,Image,TextInput, KeyboardAvoidingView } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
-import { SafeAreaView } from 'react-native-safe-area-context';
+// import { SafeAreaView } from 'react-native-safe-area-context';
+import SearchInput from '../components/SearchInput';
+import getImageForWeather from '../utils/getImageForWeather';
 
 const Home = () => {
-
+    const location = 'Lagos';
     const navigation = useNavigation();
     const onGetStartedPress = () => {
       navigation.navigate('Home');
@@ -13,21 +15,15 @@ const Home = () => {
   return (
     <View style={styles.container} behavior="padding">
         <Text style={styles.HelloText}>Enter your Location</Text>
-        <TextInput
-            autoCorrect={false}
-            placeholder="Search any city"
-            placeholderTextColor="#818589"
-            style={styles.textInput}
-            clearButtonMode="always"
-        />
+        <SearchInput/>
         <Image style={styles.weatherImg}
-            source={require('../assets/sunny.png')}
+            source={getImageForWeather('Heavy Cloud')}
         />
 
-      <Text style={styles.mainText}>In Lagos</Text>
+      <Text style={styles.mainText}>In {location}</Text>
       <Text style={styles.dText}>Today, 7th March 2023</Text>
       <Text style={styles.sText}>Its Rainy</Text>
-      <Text style={styles.wText}>  50°</Text>
+      <Text style={styles.wText}>  38°</Text>
       <Text style={styles.subText}>Enter any Location to check weather Forecast</Text>
     
     </View>
@@ -42,7 +38,7 @@ const styles = StyleSheet.create({
       backgroundColor: '#000',
     //   alignItems: 'center',
       justifyContent: 'center',
-      paddingBottom:50
+      paddingBottom:30
     },
 
     HelloText:{
@@ -108,7 +104,7 @@ const styles = StyleSheet.create({
     weatherImg:{
         width: '70%',
         maxWidth: 300,
-        maxHeight: 210,
+        maxHeight: 250,
         alignContent:'center',
         alignSelf:'center',
         // marginBottom:50,

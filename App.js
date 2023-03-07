@@ -10,6 +10,7 @@ import Home from './screens/Home';
 
 
 export default function App() {
+  
   const Stack = createStackNavigator();
   return (
     <NavigationContainer>
@@ -32,8 +33,6 @@ export default function App() {
             headerShown:false,
             }}
           />
-
-
         </Stack.Navigator>
       </SafeAreaProvider>
     </NavigationContainer>
