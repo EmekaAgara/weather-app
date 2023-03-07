@@ -1,4 +1,4 @@
-/* eslint-disable global-require */
+
 
 const images = {
   Clear: require('../assets/mooncloud.png'),

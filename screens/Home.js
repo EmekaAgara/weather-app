@@ -1,7 +1,6 @@
 import { StyleSheet, Text, View,Image,TextInput, KeyboardAvoidingView } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
-// import { SafeAreaView } from 'react-native-safe-area-context';
 import SearchInput from '../components/SearchInput';
 import getImageForWeather from '../utils/getImageForWeather';
 
@@ -36,7 +35,6 @@ const styles = StyleSheet.create({
     container: {
       flex: 1,
       backgroundColor: '#000',
-    //   alignItems: 'center',
       justifyContent: 'center',
       paddingBottom:30
     },
@@ -65,7 +63,6 @@ const styles = StyleSheet.create({
         textAlign:'center',
         paddingHorizontal:50,
         marginVertical:15
-        // paddingBottom:20,
     },
 
     dText:{
@@ -76,7 +73,6 @@ const styles = StyleSheet.create({
         paddingHorizontal:50,
         color:'#818589',
         lineHeight:20,
-        // paddingBottom:30,
     },
 
     sText:{
@@ -98,7 +94,6 @@ const styles = StyleSheet.create({
         paddingHorizontal:50,
         color:'#818589',
         lineHeight:20,
-        // paddingBottom:30,
     },
 
     weatherImg:{
@@ -107,7 +102,6 @@ const styles = StyleSheet.create({
         maxHeight: 250,
         alignContent:'center',
         alignSelf:'center',
-        // marginBottom:50,
         marginVertical:30
     },
 

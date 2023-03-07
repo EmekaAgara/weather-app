@@ -7,7 +7,6 @@ const Welcome = () => {
     const navigation = useNavigation();
     const onGetStartedPress = () => {
       navigation.navigate('Home');
-    //   navigation.navigate('HomeScreen');
     };
 
   return (
@@ -71,7 +70,6 @@ const styles = StyleSheet.create({
         color: "#fff",
         fontWeight: 500,
         alignSelf: "center",
-        // textTransform: "uppercase"
     },
 
     weatherAnimation:{
