@@ -17,7 +17,7 @@ const Welcome = () => {
         />
 
       <Text style={styles.mainText}>Check the weather in your Location</Text>
-      <Text style={styles.subText}>Selcct your current location and get the weather forcast in seconds</Text>
+      <Text style={styles.subText}>Select your current location and get the weather forcast in seconds</Text>
         <TouchableOpacity onPress={onGetStartedPress} style={styles.ButtonContainer}>
             <Text style={styles.ButtonText}>Get Started</Text>
         </TouchableOpacity>
@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
       backgroundColor: '#000',
       alignItems: 'center',
       justifyContent: 'center',
+      paddingBottom:50
     },
 
     mainText:{
