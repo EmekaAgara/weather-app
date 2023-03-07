@@ -10,7 +10,8 @@ const Welcome = () => {
             source={require('../assets/weather.gif')}
         />
 
-      <Text style={styles.text}>Welcome</Text>
+      <Text style={styles.mainText}>Check the weather in your Location</Text>
+      <Text style={styles.subText}>Selcct your current location and get the weather forcast in seconds</Text>
     </View>
   )
 }
@@ -25,13 +26,28 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
     },
 
-    text:{
-        color:'white'
+    mainText:{
+        color:'white',
+        fontSize:30,
+        fontWeight:700,
+        textAlign:'center',
+        paddingHorizontal:50,
+        paddingBottom:20,
+    },
+
+    subText:{
+        color:'white',
+        fontSize:15,
+        fontWeight:500,
+        textAlign:'center', 
+        paddingHorizontal:50,
+        color:'#818589',
+        lineHeight:20
     },
 
     weatherAnimation:{
         width:200,
-        resizeMode:'contain'
+        resizeMode:'contain',
     }
   });
   
