@@ -1,8 +1,14 @@
 import { StyleSheet, Text, View,Image,TouchableOpacity } from 'react-native'
 import React from 'react'
-import Lottie from 'lottie-react-native';
+import { useNavigation } from '@react-navigation/native'
 
 const Welcome = () => {
+
+    const navigation = useNavigation();
+    const onGetStartedPress = () => {
+      navigation.navigate('Home');
+    };
+
   return (
     
     <View style={styles.container}>
@@ -12,7 +18,7 @@ const Welcome = () => {
 
       <Text style={styles.mainText}>Check the weather in your Location</Text>
       <Text style={styles.subText}>Selcct your current location and get the weather forcast in seconds</Text>
-        <TouchableOpacity onPress={''} style={styles.ButtonContainer}>
+        <TouchableOpacity onPress={onGetStartedPress} style={styles.ButtonContainer}>
             <Text style={styles.ButtonText}>Get Started</Text>
         </TouchableOpacity>
     
@@ -51,7 +57,7 @@ const styles = StyleSheet.create({
     },
 
     ButtonContainer: {
-        backgroundColor: "#00569D",
+        backgroundColor: "#5659C6",
         borderRadius: 5,
         paddingVertical: 20,
         paddingHorizontal: 140
